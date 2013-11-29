@@ -1,29 +1,48 @@
 #include "functions.h"
 
-void initialize(int *Nx, int *Ny, int *Nt, double *dt, double *dx, vec *x, vec *y, vec *t){
+void initialize(int *Nx, int *Nt, double *T){
     cout << "Nx: "; cin >> *Nx;
-    cout << "Ny: "; cin >> *Ny;
     cout << "Nt: "; cin >> *Nt;
-    cout << "dt: "; cin >> *dt;
-    cout << "dx: "; cin >> *dx;
-    *x = zeros<vec>(*Nx); *y = zeros<vec>(*Ny); *t = zeros<vec>(*Nt);
+    cout << "T : "; cin >> *T ;
 }
 
-void conditions(int Nx, int Ny, double *x0, double *y0, double *xl, double *yl, double *t0, vec *x, vec *y, vec *t){
-    int test; vec X = *x; vec Y = *y; vec T = *t;
-    cout << "use default conditions? Yes: 0. No: 1"; cin >> test;
-    if (test == 1){
-        cout << "x0: "; cin >> *x0;
-        cout << "y0: "; cin >> *y0;
-        cout << "xl: "; cin >> *xl;
-        cout << "yl: "; cin >> *yl;
-        cout << "t0: "; cin >> *t0;
+
+void ForwardEuler(mat *U, int Nx, int Nt, double h, double dt){
+    mat u, unew; double a;
+    u = *U;
+    unew = u;
+    a = dt/h/h;
+
+    for (int t = 0; t<= Nt; t++){
+        for (int i = 1; i < Nx-1; i++){
+            for (int j = 1; j < Nx-1; j++){
+                unew(i,j) = u(i,j) + a*( u(i+1,j) + u(i-1,j) + u(i,j+1) + u(i,j-1) - 4*u(i,j));
+            }
+        }
+    u = unew;
     }
-    else{
-        *x0 = 1; *y0 = 1; *xl = 0; *yl = 0; *t0 = 0;
+    *U = u;
+}
+
+
+void BackwardEuler(mat *U, int Nx, double h, double dt){
+    mat unew, u; double a,a2,difference,tolerance; int n, max_iter;
+    u = *U;
+    a = dt/h/h; a2 = 1 / (1 + 4*a);
+    n = 0; difference = 1; tolerance = 1e-6; max_iter = 1e6;
+
+    while (n < max_iter && difference > tolerance){
+        unew = u;
+        difference = 0;
+        for (int i=1; i<Nx-1; i++){
+            for (int j=1; j<Nx-1; j++){
+                unew(i,j) = a2*(u(i,j) + a*(unew(i+1,j) + unew(i-1,j) + unew(i,j+1) + unew(i,j-1)));
+                difference += abs(unew(i,j)-u(i,j));
+            }
+        }
+        difference = difference / Nx/Nx;
+        n ++;
+        u = unew;
     }
-    X(0) = *x0; X(Nx-1) = *xl;
-    Y(0) = *y0; Y(Ny-1) = *yl;
-    T(0) = *t0;
-    *x = X, *y = Y; *t = T;
+    *U = u;
 }

@@ -9,5 +9,6 @@
 using namespace std;
 using namespace arma;
 
-void initialize(int *Nx, int *Ny, int *Nt, double *dt, double *dx, vec *x, vec *y, vec *t);
-void conditions(int Nx, int Ny, double *x0, double *y0, double *xl, double *yl, double *t0, vec *x, vec *y, vec *t);
+void initialize(int *Nx, int *Nt, double *T);
+void ForwardEuler(mat *U, int Nx, int Nt, double h, double dt);
+void BackwardEuler(mat *U, int Nx, double h, double dt);
