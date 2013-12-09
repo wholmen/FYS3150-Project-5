@@ -24,9 +24,9 @@ int main()
     u = zeros<mat>(Nx,Nx);             // u is a function showing concentration for a given x and y. u(x,y)
 
     for (int i = 0; i<Nx; i++){        // Setting boundary condition u(0,y) = 1. All other boundarys are 0.
-        u(i,0) = 1;
+        u(0,i) = 1;
     }
-    u2 = u; u3 = u;                    // u2 will be solved by explicit method, u3 Laplace,
+    u2 = u; u3 = zeros<mat>(Nx,Nx);       // u2 will be solved by explicit method, u3 Laplace,
 
     BackwardEuler(&u, Nx, h, dt);      // Solving as a function of h and dt
     ForwardEuler(&u2, Nx, Nt, h, dt);  // Solving as a function of h and dt
@@ -73,20 +73,4 @@ int main()
     myfile.close(); myfile1.close(); myfile2.close(); myfile3.close();
 
     return 0;
-}
-
-void analytical(mat *U){
-    mat u; double pi = 3.14;
-    u = *U;
-    int Nx = u.n_rows; int Ny = u.n_cols;
-    double dx = 1./Nx; double dy = 1./Ny;
-
-    for (int i=1; i<Nx; i++){
-        for (int j=1; j<Ny; j++){
-            for (int n=1; n<10; n++){
-                u(i,j) += 2./(n*pi)*(1-cos(n*pi)) * sin(n*pi*i*dy) * ( cosh(n*pi*j*dx) - cosh(n*pi) / sinh(n*pi) * sinh(n*pi*j*dx));
-            }
-        }
-    }
-    *U = u;
 }

@@ -48,7 +48,7 @@
 %
 % Navn og tittel
 %
-\author{Kandidatnummer }
+\author{Candidate number 16}
 \title{FYS3150 - Project 5}
 
 \begin{document}
@@ -61,7 +61,11 @@
   quantum mechanics to name a few. Therefore, I will use different schemes, and compare it with the analytical
   solutions to find the most efficient and stable solution. In this specific case, I simulate
   the concentration of neurotransmitters between two nerve cells, neurons. This concentration can be simulated
-  by the diffusin equation. 
+  by the diffusion equation. 
+  
+  A few notes: I have made mpg movies of the solutions, but unfortunatly they could not be delivered on a 
+  printed PDF. I have yet to receive feedback on project 4, so I haven't been able to confirm that what I did
+  in that project is correct. 
  \end{section}
 
  \begin{section}*{1+1 dimensional problem}
@@ -99,8 +103,7 @@
     \beq u(x,t) = \sum_{n=1}^{\infty} \f{-2}{\pi n} sin(n\pi x) e^{-n^2\pi ^2 t} + x - 1 \eeq
     
     Which we see approaches the steady state solution after some time. Here I used 100 points along the 
-    x-axis and i let the sum go from $n=1$ to $n=15$. A movie showing how the solution develops in time is
-    on github. The right plot is the first 6 analytic solutions. As time passes, the solution moves more 
+    x-axis and i let the sum go from $n=1$ to $n=15$. The right plot is the first 6 analytic solutions. As time passes, the solution moves more 
     and more towards the steady state solution.
     
     \includegraphics[width=0.55\textwidth]{build-main-Desktop-Debug/Analytic_1d.png}
@@ -216,55 +219,85 @@
   \beq u(x,t) = \sum_{n=1}^{\infty} \f{-2}{\pi n} sin(n\pi x) e^{-n^2\pi ^2 t} + x - 1 \eeq
   To find the solution for the 2+1 dimensional problem, I will use separation of variables for both
   $X(x)$, $Y(y)$ and $T(t)$. I need boundary conditions for $X$ and $Y$ and initial condition for $T$.
-  The boundary conditions for $X$ are given as \beq u(x,0,t) = 1, \;\;\; u(x,1,t) = 0 \eeq
+  The boundary conditions for $X$ are given as \beq u(0,y,t) = 1, \;\;\; u(1,y,t) = 0 \eeq
   The initial condition is given as
   \beq u(x,y,0) = 0, \;\; 0 < x < 1 \eeq
   The boundary conditions for the Y-direction is not given, so I have to set them for myself. Since the 
   synaptic cleft is finite and we only want the ions inside the cleft, the concentration of ions must
-  be reduced to 0 in the x-direction, so a guess for boundary conditions might be 
-  \beq u(0,x,t) = u(1,x,t) = 0 \eeq
+  be reduced to 0 in the y-direction, so a guess for boundary conditions might be 
+  \beq u(x,0,t) = u(x,1,t) = 0 \eeq
   
-  The x-direction is along the synapses, and the y-direction is perpendicular to the synapses. So the 
-  density is highest at $y=0$ and will be reduced as $y$ increases. 
+  The y-direction is along the synapses, and the x-direction is perpendicular to the synapses. So the 
+  density is highest at $x=0$ and will be reduced as $x$ increases. X-direction is the same as for the 
+  1dimension system.
   \begin{subsection}*{Finding steady state solution}
   I need the steady state solution for my problem, and that is given by solving the Laplace equation:
   \beq \nabla ^2u_s = 0\eeq
   by separation of variables that reduces to:
-  \beq \frac{1}{X(x)} \frac{d ^2 X(x)}{d x^2} = -\lambda ^2 \;\; \frac{1}{Y(y)} \frac{d^2Y(y)}{dy^2} = \lambda ^2\eeq
+  \beq \frac{1}{X(x)} \frac{d ^2 X(x)}{d x^2} = \lambda ^2 \;\; \frac{1}{Y(y)} \frac{d^2Y(y)}{dy^2} = -\lambda ^2\eeq
   And I get the solutions:
-  \beq X(x) = \alpha cos(\lambda x) + \beta sin(\lambda x) \;\; Y(y) = \gamma cosh(\lambda y) + \delta sinh(\lambda y) \eeq
+  \beq Y(y) = \alpha cos(\lambda y) + \beta sin(\lambda y) \;\; X(x) = \gamma cosh(\lambda x) + \delta sinh(\lambda x) \eeq
   Need to check boundary conditions to solve the unknown variables. 
-  \beqq u_s(0,y) = 0 = \alpha(\gamma cosh(\lambda y) + \delta sinh(\lambda y)) \eeqq
-  \beqq u_s(x,0) = 1 = \gamma(\alpha cos (\lambda x) + \beta  sin (\lambda x)) \eeqq
+  \beqq u_s(0,y) = 1 = \gamma(\alpha cos(\lambda y) + \beta sin(\lambda y)) \eeqq
+  \beqq u_s(x,0) = 0 = \alpha(\gamma cosh(\lambda x) + \delta sinh(\lambda x)) \eeqq
   So we see that for these equations to hold, (without resorting to the non-trivial solution), $\alpha = 0$ 
-  and therefore \beq \gamma \beta sin(\lambda x) = 1 \eeq
-  \beqq u_s(1,y) = 0 = \beta cos(\lambda) [\gamma cosh(\lambda y) + \delta sinh(\lambda y)] \eeqq
-  Since $\beta = 0$ leads to a nontrivial solution, we must set $cos(\lambda) = 0$. That leads to 
+  and therefore \beq \gamma \beta sin(\lambda y) = 1 \eeq
+  \beqq  u_s(x,1) = 0 = \beta sin(\lambda) [\gamma cosh(\lambda x) + \delta sinh(\lambda x)] \eeqq
+  Since $\beta = 0$ leads to a nontrivial solution, we must set $sin(\lambda) = 0$. That leads to 
   \beq \lambda = n\pi \;\;\; n = 1,2,3,... \eeq 
   The last equation 
-  \beqq u_s(x,1) = 0 = \beta sin(n\pi x) [\gamma cosh(n\pi) + \delta sinh(n\pi)] \eeqq
+  \beqq u_s(1,y) = 0 = \beta sin(n\pi y) [\gamma cosh(n\pi) + \delta sinh(n\pi)] \eeqq
   leads to \beq \gamma cosh(n\pi) = -\delta sinh(n\pi) \eeq
   \beq \delta = -\gamma coth(n\pi) \eeq 
   
   To find out the solution for (2):
-  \beq 1 = \gamma \beta sin(n\pi x) \eeq
+  \beq 1 = \gamma \beta sin(n\pi y) \eeq
   I must use Fourier expansion theory:
-  \beq 1 = \sum_{n=1}^{\infty} \gamma_n sin(n\pi x) \;\;\;\; \gamma_n = 2\int_0^1 sin(n\pi x) dx \eeq 
+  \beq 1 = \sum_{n=1}^{\infty} \gamma_n sin(n\pi y) \;\;\;\; \gamma_n = 2\int_0^1 sin(n\pi y) dy \eeq 
   \beq \gamma_n = \frac{2}{n\pi}(1 - cos(n\pi)) \eeq 
   
   Now I can put everything back together, and I find that
-  \beq u_s(x,y) = \beta sin(n\pi x) [\gamma cosh(n\pi y) - \gamma coth(n\pi) sinh(n\pi y)] \eeq
+  \beq u_s(x,y) = \beta sin(n\pi y) [\gamma cosh(n\pi x) - \gamma coth(n\pi) sinh(n\pi x)] \eeq
   Leading to the final solution
-  \beqq u_s(x,y) = \sum_{n=1}^{\infty} \frac{2}{n\pi}(1-cos(n\pi)) [cosh(n\pi y) - coth(n\pi) sinh(n\pi y)] \eeqq
+  \beqq u_s(x,y) = \sum_{n=1}^{\infty} \frac{2}{n\pi}(1-cos(n\pi)) sin(n\pi y) [cosh(n\pi x) - coth(n\pi) sinh(n\pi x)] \eeqq
   
-  By plotting the steady state solution, I get the same results as for the explicit and implicit methods.
+  By plotting the steady state solution, I can see what the diffusion equation will converge towards, and 
+  I can compare this plot to the explicit and the implicit scheme. I only plot what the concentration looks
+  like after a long time, so the schemes should have converged towards the steady state solution.
   
   \includegraphics[width=0.8\textwidth]{build-main-Desktop-Debug/SteadyState.png}
-  
-  which is not weird, since the Laplace equation is the solution that the diffusion equation will approach,
-  but one loses the possibility of seeing the development through time. 
+ 
   \end{subsection}
   
+  \begin{subsection}*{Analytic 2+1D diffusion}
+   Now, let's try to solve the 2D diffusion equation! 
+   
+   First, we separate variables:
+   \beq \f{1}{X(x)} \f{\pa^2 X(x)}{\pa x^2} + \f{1}{Y(y)} \f{\pa^2 Y(y)}{\pa y^2} = \f{1}{T(t)} \f{\pa T(t)}{\pa t}\eeq 
+   
+   which gives the time solution \beqq T(t) = e^{-\lambda ^2 t} \eeqq
+   and the following spacial equation
+   \beq \f{1}{X(x)} \f{\pa^2 X(x)}{\pa x^2} = -\lambda ^2 - \f{1}{Y(y)} \f{\pa^2 Y(y)}{\pa y^2} \eeq
+   Again, each of these have to be constant:
+   \beq \f{1}{X(x)} \f{\pa^2 X(x)}{\pa x^2} = \rho ^2 = -\lambda ^2 - \f{1}{Y(y)} \f{\pa^2 Y(y)}{\pa y^2} \eeq
+   We get the solutions
+   \beq X(x) = \gamma cosh(\rho x) + \delta sinh(\rho x) \;\;\;
+   Y(y) = \alpha cos(\rho y) + \beta sin(\rho y) + \sigma cos(\lambda y) + \theta sin(\lambda y) \eeq
+   
+   Inforcing the boundary conditions:
+   \beq u(0,y) = 1 = \gamma (\alpha cos(\rho y) + \beta sin(\rho y) + \sigma cos(\lambda y) + \theta sin(\lambda y)) \eeq
+   \beq u(x,0) = 0 = (\alpha + \sigma) (\gamma cosh(\rho x) + \delta sinh(\rho x)) \eeq
+   Setting $\alpha = -\sigma$ to solve this equation. 
+   \beq u(x,1) = 0 = (\gamma cosh(\rho x) + \delta sinh(\rho x)) (\alpha cos(\rho)+\beta sin(\rho )-\alpha cos(\lambda)+\theta sin(\lambda )) \eeq
+   By setting $\alpha = 0$, I can get $\rho = \lambda = n\pi$. This is not a general solution, but the 
+   steady state solution I already have calculated. Without making any such breathtaking assumptions, I have
+   too few boundary conditions to solve this problem by separation of variables. 
+   
+   Although I can not solve this diffusion equation, the steady state solution will serve it's purpose, since
+   I compare plots after enough time has passed for the soltion to converge to the steady state. 
+  
+  \end{subsection}
+
   
   
   \end{section}
@@ -296,7 +329,7 @@
     Top left: $dt = \f{1}{100}$, top right: $dt = \f{1}{369}$, lower left: $dt = \f{1}{370}$,
     lower right $dt = \f{1}{1000}$
     
-    The results I get from the explicit scheme is very close to the analytic steady state solution. 
+    The results I get from the explicit scheme is close to the analytic steady state solution. 
     
  \end{subsection}
   \begin{subsection}*{Implicit method}
@@ -304,10 +337,37 @@
    Euler formula instead of the forward going formula for the time derivative on the diffusion equation.
    Reorganizing the equation, I end up with
    \beq u_{i,j}^l + 4\alpha u_{i,j}^l - \alpha[u_{i+1,j}^l + u_{i-1,j}^l + u_{i,j+1}^l + u_{i,j-1}^l] = u_{i,j}^{l-1} \eeq
-  \end{subsection}
+   Which is an equation that has many unknown values at time $l$ that are decided from a single point at
+   an earlier time, $l-1$. 
+   
+   The way I solve this equation is by using Jacobi's method. I guess an initial $u$, then computing a new 
+   solution $u_{new}$ by the given equation, and then I see if my new solution $u_{new}$ is close enough to 
+   my initial guess $u$. If yes: Then I have a good enough solution. If not: then I set $u = u_{new}$ and 
+   compute $u_{new}$ again, based on the revised u. 
+   
+   This scheme has no stability issues like the explicit scheme has. The error is the same as for the 
+   explicit scheme, since the backward and the forward Euler formula has the same error, but since I do
+   not have to worry about the stability, I can increase the spacial resolution quite a bit without my 
+   results going bananas! 
+   
+    \includegraphics[width=0.55\textwidth]{build-main-Desktop-Debug/Implicit100_100.png}
+    \includegraphics[width=0.55\textwidth]{build-main-Desktop-Debug/Implicit10_1000.png}
+    
+   First plot has a $\Delta x = 0.01$ and $\Delta t = 0.01$. This made the explicit scheme unstable, but
+   I could with no problem get a higher spacial resolution here without decreasing the time step.
+   Second plot has $\Delta x = 0.1$ and $\Delta t = 0.001$. This looks exactly equal to the explicit 
+   solution, which would be natural. It also looks very close to the closed form solution for the steady state.
+   
+   As a final comparison, I have rotated the plots, so I can see them from the side. Here it becomes quite 
+   obvious that the numerical schemes have a noticable error. Both the implicit and the explicit scheme
+   goes to 0 way too fast! 
+   
+   \includegraphics[width=0.55\textwidth]{build-main-Desktop-Debug/Explisit_side.png}
+   \includegraphics[width=0.55\textwidth]{build-main-Desktop-Debug/Implicit_side.png}
+   
+   \includegraphics[width=0.6\textwidth]{build-main-Desktop-Debug/Analytic_side.png}
+   \end{subsection}
 
-  
   \end{section}
-
   
 \end{document}

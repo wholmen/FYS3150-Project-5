@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.11.3)  9 DEC 2013 03:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.11.3)  9 DEC 2013 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -368,7 +368,7 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=build-main-Desktop-Debug/s
 ynaptic_cleft-eps-converted-to.pdf build-main-Desktop-Debug/synaptic_cleft.eps>
 
-(epstopdf)             \includegraphics on input line 76.
+(epstopdf)             \includegraphics on input line 80.
 Package epstopdf Info: Output file is already uptodate.
 
 <build-main-Desktop-Debug/synaptic_cleft-eps-converted-to.pdf, id=8, 581.17125p
@@ -378,7 +378,7 @@ File: build-main-Desktop-Debug/synaptic_cleft-eps-converted-to.pdf Graphic file
 
 <use build-main-Desktop-Debug/synaptic_cleft-eps-converted-to.pdf>
 Package pdftex.def Info: build-main-Desktop-Debug/synaptic_cleft-eps-converted-
-to.pdf used on input line 76.
+to.pdf used on input line 80.
 (pdftex.def)             Requested size: 392.0015pt x 109.00383pt.
  [1 <./build-main-Desktop-Debug/synaptic_cleft-eps-converted-to.pdf>]
 <build-main-Desktop-Debug/Analytic_1d.png, id=26, 586.8324pt x 442.2924pt>
@@ -386,7 +386,7 @@ File: build-main-Desktop-Debug/Analytic_1d.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Analytic_1d.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Analytic_1d.png used on input
- line 106.
+ line 109.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
 <build-main-Desktop-Debug/Analytic_1d_first6.png, id=28, 578.16pt x 433.62pt>
@@ -394,10 +394,10 @@ File: build-main-Desktop-Debug/Analytic_1d_first6.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Analytic_1d_first6.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Analytic_1d_first6.png used o
-n input line 107.
+n input line 110.
 (pdftex.def)             Requested size: 269.5015pt x 202.12083pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 106--108
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 109--111
 [][] [] 
  []
 
@@ -408,7 +408,7 @@ File: build-main-Desktop-Debug/MC_uniform.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/MC_uniform.png>
 Package pdftex.def Info: build-main-Desktop-Debug/MC_uniform.png used on input 
-line 143.
+line 146.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
 <build-main-Desktop-Debug/MC_uniform_low_dt.png, id=36, 586.8324pt x 442.2924pt
@@ -416,10 +416,10 @@ line 143.
 File: build-main-Desktop-Debug/MC_uniform_low_dt.png Graphic file (type png)
  <use build-main-Desktop-Debug/MC_uniform_low_dt.png>
 Package pdftex.def Info: build-main-Desktop-Debug/MC_uniform_low_dt.png used on
- input line 144.
+ input line 147.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 143--145
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 146--148
 [][] [] 
  []
 
@@ -430,17 +430,17 @@ File: build-main-Desktop-Debug/MC_normal.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/MC_normal.png>
 Package pdftex.def Info: build-main-Desktop-Debug/MC_normal.png used on input l
-ine 177.
+ine 180.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
 <build-main-Desktop-Debug/MC_normal_low_dt.png, id=49, 586.8324pt x 442.2924pt>
 File: build-main-Desktop-Debug/MC_normal_low_dt.png Graphic file (type png)
 <use build-main-Desktop-Debug/MC_normal_low_dt.png>
 Package pdftex.def Info: build-main-Desktop-Debug/MC_normal_low_dt.png used on 
-input line 178.
+input line 181.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 177--180
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 180--183
 [][] []
  []
 
@@ -451,7 +451,7 @@ File: build-main-Desktop-Debug/MC_normal_very_low_dt.png Graphic file (type png
 )
  <use build-main-Desktop-Debug/MC_normal_very_low_dt.png>
 Package pdftex.def Info: build-main-Desktop-Debug/MC_normal_very_low_dt.png use
-d on input line 182.
+d on input line 185.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
 <build-main-Desktop-Debug/MC_normal_very_very_low_dt.png, id=51, 586.8324pt x 4
@@ -460,10 +460,10 @@ File: build-main-Desktop-Debug/MC_normal_very_very_low_dt.png Graphic file (typ
 e png)
  <use build-main-Desktop-Debug/MC_normal_very_very_low_dt.png>
 Package pdftex.def Info: build-main-Desktop-Debug/MC_normal_very_very_low_dt.pn
-g used on input line 183.
+g used on input line 186.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 181--184
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 184--187
 [] [] 
  []
 
@@ -475,7 +475,7 @@ File: build-main-Desktop-Debug/CrankNicolson.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/CrankNicolson.png>
 Package pdftex.def Info: build-main-Desktop-Debug/CrankNicolson.png used on inp
-ut line 196.
+ut line 199.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
 <build-main-Desktop-Debug/CrankNicolson_first3.png, id=60, 578.16pt x 433.62pt>
@@ -483,10 +483,10 @@ File: build-main-Desktop-Debug/CrankNicolson_first3.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/CrankNicolson_first3.png>
 Package pdftex.def Info: build-main-Desktop-Debug/CrankNicolson_first3.png used
- on input line 197.
+ on input line 200.
 (pdftex.def)             Requested size: 269.5015pt x 202.12083pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 196--198
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 199--201
 [][] [] 
  []
 
@@ -497,16 +497,16 @@ File: build-main-Desktop-Debug/CrankNicolson_low_dt.png Graphic file (type png)
 
  <use build-main-Desktop-Debug/CrankNicolson_low_dt.png>
 Package pdftex.def Info: build-main-Desktop-Debug/CrankNicolson_low_dt.png used
- on input line 206.
+ on input line 209.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 File: build-main-Desktop-Debug/MC_uniform_low_dt.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/MC_uniform_low_dt.png>
 Package pdftex.def Info: build-main-Desktop-Debug/MC_uniform_low_dt.png used on
- input line 207.
+ input line 210.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 206--208
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 209--211
 [][] [] 
  []
 
@@ -517,102 +517,131 @@ File: build-main-Desktop-Debug/SteadyState.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/SteadyState.png>
 Package pdftex.def Info: build-main-Desktop-Debug/SteadyState.png used on input
- line 262.
+ line 268.
 (pdftex.def)             Requested size: 392.0015pt x 295.45702pt.
- [8 <./build-main-Desktop-Debug/SteadyState.png>]
-<build-main-Desktop-Debug/Explicit100.png, id=77, 586.8324pt x 442.2924pt>
+ [8 <./build-main-Desktop-Debug/SteadyState.png>] [9]
+<build-main-Desktop-Debug/Explicit100.png, id=80, 586.8324pt x 442.2924pt>
 File: build-main-Desktop-Debug/Explicit100.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Explicit100.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Explicit100.png used on input
- line 291.
+ line 324.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-<build-main-Desktop-Debug/Explicit369.png, id=78, 586.8324pt x 442.2924pt>
+<build-main-Desktop-Debug/Explicit369.png, id=81, 586.8324pt x 442.2924pt>
 File: build-main-Desktop-Debug/Explicit369.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Explicit369.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Explicit369.png used on input
- line 292.
+ line 325.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-<build-main-Desktop-Debug/Explicit370.png, id=79, 586.8324pt x 442.2924pt>
+<build-main-Desktop-Debug/Explicit370.png, id=82, 586.8324pt x 442.2924pt>
 File: build-main-Desktop-Debug/Explicit370.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Explicit370.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Explicit370.png used on input
- line 293.
+ line 326.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-<build-main-Desktop-Debug/Explicit1000.png, id=80, 586.8324pt x 442.2924pt>
+<build-main-Desktop-Debug/Explicit1000.png, id=83, 586.8324pt x 442.2924pt>
 File: build-main-Desktop-Debug/Explicit1000.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Explicit1000.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Explicit1000.png used on inpu
-t line 294.
+t line 327.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 291--295
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 324--328
 [][] []
  []
 
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 291--295
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 324--328
 [] [] 
  []
 
-[9 <./build-main-Desktop-Debug/Explicit100.png> <./build-main-Desktop-Debug/Exp
-licit369.png> <./build-main-Desktop-Debug/Explicit370.png> <./build-main-Deskto
-p-Debug/Explicit1000.png>]
-<build-main-Desktop-Debug/Implicit100_100.png, id=88, 586.8324pt x 442.2924pt>
+[10 <./build-main-Desktop-Debug/Explicit100.png> <./build-main-Desktop-Debug/Ex
+plicit369.png> <./build-main-Desktop-Debug/Explicit370.png> <./build-main-Deskt
+op-Debug/Explicit1000.png>]
+<build-main-Desktop-Debug/Implicit100_100.png, id=91, 586.8324pt x 442.2924pt>
 File: build-main-Desktop-Debug/Implicit100_100.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Implicit100_100.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Implicit100_100.png used on i
-nput line 319.
+nput line 353.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-<build-main-Desktop-Debug/Implicit10_1000.png, id=89, 586.8324pt x 442.2924pt>
+<build-main-Desktop-Debug/Implicit10_1000.png, id=92, 586.8324pt x 442.2924pt>
 File: build-main-Desktop-Debug/Implicit10_1000.png Graphic file (type png)
 
 <use build-main-Desktop-Debug/Implicit10_1000.png>
 Package pdftex.def Info: build-main-Desktop-Debug/Implicit10_1000.png used on i
-nput line 320.
+nput line 354.
 (pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
 
-Overfull \hbox (51.61348pt too wide) in paragraph at lines 319--321
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 353--355
 [][] [] 
  []
 
-[10 <./build-main-Desktop-Debug/Implicit100_100.png> <./build-main-Desktop-Debu
-g/Implicit10_1000.png>] (./Project5.aux) ) 
+<build-main-Desktop-Debug/Explisit_side.png, id=93, 586.8324pt x 442.2924pt>
+File: build-main-Desktop-Debug/Explisit_side.png Graphic file (type png)
+
+<use build-main-Desktop-Debug/Explisit_side.png>
+Package pdftex.def Info: build-main-Desktop-Debug/Explisit_side.png used on inp
+ut line 365.
+(pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
+
+<build-main-Desktop-Debug/Implicit_side.png, id=94, 586.8324pt x 442.2924pt>
+File: build-main-Desktop-Debug/Implicit_side.png Graphic file (type png)
+
+<use build-main-Desktop-Debug/Implicit_side.png>
+Package pdftex.def Info: build-main-Desktop-Debug/Implicit_side.png used on inp
+ut line 366.
+(pdftex.def)             Requested size: 269.5015pt x 203.12628pt.
+
+Overfull \hbox (51.61348pt too wide) in paragraph at lines 365--367
+[][] [] 
+ []
+
+<build-main-Desktop-Debug/Analytic_side.png, id=95, 586.8324pt x 442.2924pt>
+[11 <./build-main-Desktop-Debug/Implicit100_100.png> <./build-main-Desktop-Debu
+g/Implicit10_1000.png>]
+File: build-main-Desktop-Debug/Analytic_side.png Graphic file (type png)
+ <use build-main-Desktop-Debug/Analytic_side.png>
+Package pdftex.def Info: build-main-Desktop-Debug/Analytic_side.png used on inp
+ut line 368.
+(pdftex.def)             Requested size: 294.00299pt x 221.59108pt.
+
+[12 <./build-main-Desktop-Debug/Explisit_side.png> <./build-main-Desktop-Debug/
+Implicit_side.png> <./build-main-Desktop-Debug/Analytic_side.png>]
+(./Project5.aux) ) 
 Here is how much of TeX's memory you used:
- 4685 strings out of 495031
- 66024 string characters out of 6181531
- 130600 words of memory out of 5000000
- 7795 multiletter control sequences out of 15000+600000
+ 4700 strings out of 495031
+ 66636 string characters out of 6181531
+ 132600 words of memory out of 5000000
+ 7807 multiletter control sequences out of 15000+600000
  15508 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,6n,40p,240b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/wilhelm/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx1440.600pk> </home/wilhelm/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecrm1200.600pk> </home/wilhelm/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecbx1728.600pk> </home/wilhelm/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.
-600pk> </home/wilhelm/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb>
-Output written on Project5.pdf (11 pages, 1290605 bytes).
+ 38i,6n,40p,240b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/wilhelm/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx14
+40.600pk> </home/wilhelm/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk>
+ </home/wilhelm/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/w
+ilhelm/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/wilhelm/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Project5.pdf (13 pages, 1459945 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 319 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

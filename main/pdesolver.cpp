@@ -7,8 +7,8 @@ PDESolver::PDESolver(int nt, int nx, double Dt, double Dx)
 
 void PDESolver::RandomWalk(vec *x)
 {
-    double l0, r; vec X; long idum; int N,n;
-    X = *x; l0 = sqrt(2*dt); idum = -1;
+    double l0, r; vec X; long idum; int N,n; ofstream myfile;
+    X = *x; l0 = sqrt(2*dt); idum = -1; myfile.open("MC_uniform_movie.txt");
 
     for (int t=0;t<=Nt;t++){
         N = X.n_rows; n = 0;            // n will determine how many new particles to be added in x = 0
@@ -32,13 +32,14 @@ void PDESolver::RandomWalk(vec *x)
         for (int i=0;i<n;i++){
             X.insert_rows(0,1); X(0) = 0; // Maintaining # of particles at x=0
         }
+        for (int elem=0; elem<X.n_rows; elem++){myfile << X(elem) << " ";}; myfile << endl;
     }
     *x = sort(X);
 }
 
 void PDESolver::GaussRandomWalk(vec *x){
-    double l0, r, theta, bin, L; vec X; long idum; int N,n;
-    X = *x; l0 = sqrt(2*dt); idum = -1; bin = 1./20;
+    double l0, r, theta, bin, L; vec X; long idum; int N,n; ofstream myfile;
+    X = *x; l0 = sqrt(2*dt); idum = -1; bin = 1./20; myfile.open("MC_normal_movie.txt");
 
     for (int t=0;t<=Nt;t++){
         N = X.n_rows; n = 0;            // n will determine how many new particles to be added in x = 0
@@ -64,6 +65,7 @@ void PDESolver::GaussRandomWalk(vec *x){
         for (int i=0;i<n;i++){
             X.insert_rows(0,1); X(0) = 0; // Maintaining # of particles at x=0
         }
+        for (int elem=0; elem<X.n_rows; elem++){myfile << X(elem) << " ";}; myfile << endl;
     }
     *x = sort(X);
 }
